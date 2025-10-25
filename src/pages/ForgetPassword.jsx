@@ -1,28 +1,30 @@
-import { Link, Navigate, useNavigate } from "react-router";
+import { Link, Navigate } from "react-router";
 import { FaEnvelope } from "react-icons/fa6";
 import { use, useState } from "react";
 import AuthContext from "../context/AuthContext";
-import toast, { ToastBar } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ForgetPassword() {
-  const [loading, setLoading] = useState("not-send");
+  const [loading, setLoading] = useState(false);
   const { loginEmail, setLoginEmail, resetPassword } = use(AuthContext);
-  const navigate = useNavigate();
 
   const handleResetPassword = (e) => {
     e.preventDefault();
-    setLoading("sending");
+    setLoading(true);
 
     resetPassword(loginEmail)
       .then(() => {
-        toast("Reset email send successfully");
-        setLoading("sent");
+        toast("Reset email sent successfully");
+
+        setLoading(false);
+
+        setTimeout(() => {
+          window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+        }, 1500);
       })
       .catch((error) => {
-        ToastBar(error.message);
-      })
-      .finally(() => {
-        navigate("/auth/login");
+        toast.error(error.message);
+        setLoading(false);
       });
   };
 
@@ -55,17 +57,12 @@ export default function ForgetPassword() {
           </label>
           <div className="validator-hint hidden">Enter valid email address</div>
           <button type="submit" className="btn btn-primary min-w-full ">
-            {loading == "sending" ? (
+            {loading ? (
               <>
                 {" "}
                 <span className="loading loading-spinner loading-md"></span>{" "}
                 Sending Reset Email
               </>
-            ) : loading == "sent" ? (
-              <Navigate
-                to="https://mail.google.com/mail/u/0/#inbox"
-                target="_blank"
-              />
             ) : (
               "Reset Password"
             )}

@@ -3,7 +3,10 @@ import { FaStar } from "react-icons/fa";
 
 export default function SkillCard({ skill }) {
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden">
+    <div
+      data-aos="fade-up"
+      className="bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden"
+    >
       <figure className="h-56 w-full overflow-hidden">
         <img
           src={skill.image}

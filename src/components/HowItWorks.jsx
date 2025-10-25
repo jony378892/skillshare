@@ -27,13 +27,15 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-white py-10 px-6 sm:px-12 text-center">
+    <section className="bg-white py-10 text-center">
       <h2 className="text-3xl font-bold text-gray-800 mb-10">How It Works</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mx-auto">
         {steps.map((step) => (
           <div
             key={step.id}
+            data-aos="fade-up"
+            data-aos-delay={step.id * 100}
             className="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-8 border border-gray-100"
           >
             <div className="flex flex-col items-center">

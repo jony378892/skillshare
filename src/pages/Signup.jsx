@@ -78,7 +78,7 @@ export default function Signup() {
             <label className="label">Name</label>
             <input
               type="text"
-              className="input input-bordered"
+              className="input input-bordered outline-none"
               name="name"
               placeholder="Your full name"
               required
@@ -88,7 +88,7 @@ export default function Signup() {
             <label className="label">Image URL</label>
             <input
               type="text"
-              className="input input-bordered"
+              className="input input-bordered outline-none"
               name="image"
               placeholder="Profile image URL"
               required
@@ -98,7 +98,7 @@ export default function Signup() {
             <label className="label">Email</label>
             <input
               type="email"
-              className="input input-bordered"
+              className="input input-bordered outline-none"
               name="email"
               placeholder="Email address"
               required
@@ -108,7 +108,7 @@ export default function Signup() {
             <label className="label">Password</label>
             <div className="relative">
               <input
-                className="input input-bordered w-full"
+                className="input input-bordered outline-none"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 required
@@ -119,7 +119,7 @@ export default function Signup() {
               />
               <button
                 type="button"
-                className="absolute right-4 top-3 cursor-pointer"
+                className="absolute right-8 top-3 cursor-pointer z-10"
                 onClick={handleShowPassword}
               >
                 {showPassword ? (

@@ -40,7 +40,7 @@ export default function Profile() {
         setEditing(false);
         photo = "";
         setUpdateLoading(false);
-        toast("User updated successfully");
+        toast("profile updated successfully");
       })
       .catch((error) => {
         toast(error.message);
@@ -90,7 +90,7 @@ export default function Profile() {
               <FaLink size={20} />
               <input
                 className="w-full bg-white text-gray-800 outline-none disabled:bg-white disabled:text-black/80  disabled:cursor-not-allowed placeholder:text-gray-400"
-                placeholder="Paste you profile link"
+                placeholder="Paste you photo url"
                 type="text"
                 name="photo"
                 disabled={!editing}

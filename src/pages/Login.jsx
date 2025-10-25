@@ -76,7 +76,7 @@ export default function Login() {
             <input
               onChange={handleLoginEmail}
               type="email"
-              className="input"
+              className="input outline-none"
               placeholder="Email"
               name="email"
               required
@@ -84,7 +84,7 @@ export default function Login() {
             <label className="label">Password</label>
             <input
               type="password"
-              className="input"
+              className="input outline-none"
               placeholder="Password"
               name="password"
               required

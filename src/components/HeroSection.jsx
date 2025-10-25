@@ -10,7 +10,7 @@ import cookingImg from "../assets/Cooking-cuate.png";
 
 export default function HeroSection() {
   return (
-    <section className="pb-10">
+    <section className="pb-10 pt-5">
       <Swiper
         modules={[Autoplay]}
         autoplay={{

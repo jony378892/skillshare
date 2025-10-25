@@ -3,7 +3,10 @@ import { FaStar } from "react-icons/fa";
 
 export default function ProviderCard({ provider }) {
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden text-center p-6 flex flex-col items-center">
+    <div
+      data-aos="fade-up"
+      className="bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden text-center p-6 flex flex-col items-center"
+    >
       <img
         src={provider.image}
         alt={provider.providerName}

@@ -1,8 +1,9 @@
-import React from "react";
-
 export default function Newsletter() {
   return (
-    <section className="bg-white pt-8 pb-16 px-6 sm:px-12 lg:px-20">
+    <section
+      className="bg-white pt-8 pb-16 px-6 sm:px-12 lg:px-20"
+      data-aos="fade-up"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
           Subscribe to Our Newsletter

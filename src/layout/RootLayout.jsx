@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router";
 import Footer from "../components/Footer";
-import { Toaster } from "react-hot-toast";
+import Toaster from "../components/Toaster";
 
 export default function RootLayout() {
   return (

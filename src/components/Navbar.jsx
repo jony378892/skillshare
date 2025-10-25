@@ -8,7 +8,14 @@ export default function Navbar() {
   const { user, logOutUser } = use(AuthContext);
 
   const handleLogout = () => {
-    logOutUser();
+    logOutUser()
+      .then(() => {
+        toast("Logout successfully");
+      })
+      .catch((error) => {
+        toast(error.message);
+        console.log(error);
+      });
   };
 
   return (
@@ -106,7 +113,7 @@ export default function Navbar() {
                 <FaRegCircleUser size={26} />
               </Link>
               <Link
-                className="btn btn-neutral bg-red-600 rounded-md text-white"
+                className="btn btn-outline btn-error hover:text-"
                 onClick={handleLogout}
               >
                 Logout

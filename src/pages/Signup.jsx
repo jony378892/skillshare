@@ -3,6 +3,7 @@ import { use, useState } from "react";
 import AuthContext from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { FaEyeSlash, FaKey, FaRegEye } from "react-icons/fa6";
+import toast from "react-hot-toast";
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,8 +24,8 @@ export default function Signup() {
     createUser(email, password)
       .then((result) => {
         const currentUser = result.user;
-        console.log(currentUser);
-        console.log("Signup successful");
+        // console.log(currentUser);
+        toast("Signup successful");
 
         updateUser({ displayName: name, photoURL: image })
           .then(() => {
@@ -32,14 +33,14 @@ export default function Signup() {
             navigate("/");
           })
           .catch((error) => {
-            console.log(error.message);
+            toast(error.message);
             setUser(user);
           });
       })
       .catch((error) => {
         const errorMessage = error.message;
 
-        console.log(errorMessage);
+        toast(errorMessage);
       });
   };
 
@@ -47,11 +48,12 @@ export default function Signup() {
     signInWithGoogle()
       .then((result) => {
         const currentUser = result.user;
-        console.log(currentUser);
+        // console.log(currentUser);
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        const errorMessage = error.message;
+        toast(errorMessage);
       });
   };
 

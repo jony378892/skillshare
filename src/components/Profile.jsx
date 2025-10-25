@@ -3,6 +3,7 @@ import AuthContext from "../context/AuthContext";
 import Loading from "./Loading";
 import { MdEmail } from "react-icons/md";
 import { FaKey, FaLink, FaUser } from "react-icons/fa6";
+import toast from "react-hot-toast";
 
 export default function Profile() {
   const [editing, setEditing] = useState(false);
@@ -22,8 +23,8 @@ export default function Profile() {
     let name = form.name.value;
 
     if (!photo && name == user.displayName) {
-      console.log(photo, name);
-      console.log("Update your name or photoURL");
+      // console.log(photo, name);
+      toast("Update your name or photoURL");
       return;
     }
 
@@ -39,10 +40,10 @@ export default function Profile() {
         setEditing(false);
         photo = "";
         setUpdateLoading(false);
-        console.log("User updated successfully");
+        toast("User updated successfully");
       })
       .catch((error) => {
-        console.log(error.message);
+        toast(error.message);
       });
   };
 

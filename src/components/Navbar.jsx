@@ -2,6 +2,7 @@ import { use } from "react";
 import { Link } from "react-router";
 import AuthContext from "../context/AuthContext";
 import { FaRegCircleUser } from "react-icons/fa6";
+import toast from "react-hot-toast";
 
 export default function Navbar() {
   const { user, logOutUser } = use(AuthContext);

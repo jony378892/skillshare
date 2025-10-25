@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { use } from "react";
 import AuthContext from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
+import toast, { ToastBar } from "react-hot-toast";
 
 export default function Login() {
   const { signInUser, setUser, signInWithGoogle, setLoginEmail } =
@@ -19,9 +20,9 @@ export default function Login() {
     signInUser(email, password)
       .then((result) => {
         const currentUser = result.user;
-        console.log(currentUser);
+        // console.log(currentUser);
         setUser(currentUser);
-        console.log("Signin successful");
+        toast("Signin successful");
 
         if (location.state) {
           navigate(location.state);
@@ -31,7 +32,7 @@ export default function Login() {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
+        toast(errorMessage);
       });
   };
 
@@ -39,7 +40,7 @@ export default function Login() {
     signInWithGoogle()
       .then((result) => {
         const currentUser = result.user;
-        console.log(currentUser);
+        // console.log(currentUser);
 
         if (location.state) {
           navigate(location.state);
@@ -48,7 +49,8 @@ export default function Login() {
         }
       })
       .catch((error) => {
-        console.log(error);
+        const errorMessage = error.message;
+        toast(errorMessage);
       });
   };
 

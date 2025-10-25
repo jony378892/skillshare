@@ -2,6 +2,7 @@ import { Link, Navigate, useNavigate } from "react-router";
 import { FaEnvelope } from "react-icons/fa6";
 import { use, useState } from "react";
 import AuthContext from "../context/AuthContext";
+import toast, { ToastBar } from "react-hot-toast";
 
 export default function ForgetPassword() {
   const [loading, setLoading] = useState("not-send");
@@ -14,11 +15,11 @@ export default function ForgetPassword() {
 
     resetPassword(loginEmail)
       .then(() => {
-        console.log("Reset email send successfully");
+        toast("Reset email send successfully");
         setLoading("sent");
       })
       .catch((error) => {
-        console.log(error.message);
+        ToastBar(error.message);
       })
       .finally(() => {
         navigate("/auth/login");

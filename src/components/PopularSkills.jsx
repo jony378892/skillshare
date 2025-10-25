@@ -7,7 +7,7 @@ export default function PopularSkills() {
   const skillsData = use(skillsPromise);
 
   return (
-    <section className=" bg-white py-10 px-5 sm:px-0">
+    <section className=" bg-white py-10 px-5 lg:px-0">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-16">
         Popular Skills
       </h2>

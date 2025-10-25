@@ -5,7 +5,7 @@ export default function ProviderCard({ provider }) {
   return (
     <div
       data-aos="fade-up"
-      className="bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden text-center p-6 flex flex-col items-center"
+      className="bg-gray-100 border border-gray-100 rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden text-center p-6 flex flex-col items-center"
     >
       <img
         src={provider.image}

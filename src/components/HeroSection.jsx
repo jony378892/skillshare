@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import studyImg from "../assets/Online learning-cuate.png";
@@ -10,79 +9,80 @@ import cookingImg from "../assets/Cooking-cuate.png";
 
 export default function HeroSection() {
   return (
-    <section className="pb-10 pt-5">
+    <section className="pb-10 pt-8">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
-        spaceBetween={50}
+        pagination={{ clickable: true }}
+        spaceBetween={40}
         loop={true}
+        className="max-w-6xl mx-auto"
       >
+        {/* Slide 1 - Skill Exchange Overview */}
         <SwiperSlide>
-          <div className="flex flex-col-reverse sm:flex-row gap-5 items-center">
-            <div className="xl:w-1/2 px-5 xl:px-10">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
-                Bring Tutoring Right to Your Home.
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 lg:px-12">
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+                Learn, Teach, and Grow — Together.
               </h2>
-              <p className=" text-gray-700 leading-relaxed">
-                Learning has never been easier. With our platform, you can
-                connect with expert tutors who specialize in subjects ranging
-                from mathematics and science to arts and languages. Each tutor
-                offers a personalized approach to fit your goals and schedule,
-                ensuring that your learning experience is both effective and
-                engaging.
+              <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                SkillSwap is an interactive community where people offer, learn,
+                and exchange skills within their local area. Whether it’s
+                coding, photography, guitar lessons, or yoga — connect with
+                passionate learners and providers near you.
               </p>
             </div>
             <img
               src={studyImg}
               alt="Online Learning"
-              className="w-full sm:w-1/2 lg:w-5/12"
+              className="w-full lg:w-5/12 max-w-sm mx-auto"
             />
           </div>
         </SwiperSlide>
 
+        {/* Slide 2 - Yoga / Wellness */}
         <SwiperSlide>
-          <div className="flex flex-col-reverse sm:flex-row gap-5 items-center justify-center">
-            <div className="xl:w-1/2 px-5 xl:px-10">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
-                Find Your Balance with Local Yoga Classes.
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 lg:px-12">
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+                Share Your Skills, Inspire Others.
               </h2>
-              <p className=" text-gray-700 leading-relaxed">
-                Reconnect your mind and body with yoga sessions tailored to your
-                needs. Whether you're a beginner exploring meditation and
-                breathing techniques, or an advanced practitioner aiming to
-                refine your poses, our community of certified instructors is
-                here to guide you. Join local sessions, make new friends.
+              <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                Have a talent to share? From yoga sessions to art workshops,
+                SkillSwap helps you reach local learners who want to grow. Teach
+                what you love, build your reputation, and earn recognition
+                through community ratings.
               </p>
             </div>
             <img
               src={yogaImg}
               alt="Yoga Class"
-              className="w-full sm:w-1/2 lg:w-5/12"
+              className="w-full lg:w-5/12 max-w-sm mx-auto"
             />
           </div>
         </SwiperSlide>
 
+        {/* Slide 3 - Community & Cooking */}
         <SwiperSlide>
-          <div className="flex flex-col-reverse sm:flex-row gap-5 items-center justify-center">
-            <div className="xl:w-1/2 px-5 xl:px-10">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
-                Discover the Joy of Cooking Together.
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 lg:px-12">
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+                Discover, Connect, and Exchange Locally.
               </h2>
-              <p className=" text-gray-700 leading-relaxed">
-                Food brings people together — and now, you can learn from some
-                of the best local chefs and passionate home cooks. Explore
-                cuisines from around the world, master cooking techniques, and
-                understand the art of blending flavors. Whether you’re learning
-                to cook your first meal or refining your culinary craft.
+              <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                Our platform bridges skill-seekers and providers in your
+                neighborhood. Trade lessons, learn something new, or just
+                connect with creative people around you. Growth starts with
+                sharing — and we make that easy.
               </p>
             </div>
             <img
               src={cookingImg}
               alt="Cooking Together"
-              className="w-full sm:w-1/2 lg:w-4/12"
+              className="w-full lg:w-4/12 max-w-sm mx-auto"
             />
           </div>
         </SwiperSlide>

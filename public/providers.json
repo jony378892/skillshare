@@ -1,0 +1,23 @@
+[
+  {
+    "providerId": 1,
+    "providerName": "Alex Martin",
+    "category": "Music",
+    "rating": 4.9,
+    "image": "https://i.postimg.cc/example1.png"
+  },
+  {
+    "providerId": 2,
+    "providerName": "Sophie Lee",
+    "category": "Design",
+    "rating": 4.8,
+    "image": "https://i.postimg.cc/example2.png"
+  },
+  {
+    "providerId": 3,
+    "providerName": "David Chen",
+    "category": "Programming",
+    "rating": 4.7,
+    "image": "https://i.postimg.cc/example3.png"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners. Learn chords, rhythm, and basic songs in a friendly environment.",
+    "image": "https://i.postimg.cc/2yJrJ8Vf/guitar-lessons.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers to improve fluency and confidence.",
+    "image": "https://i.postimg.cc/Bbf4S9S2/spoken-english.png",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Maya Rahman",
+    "providerEmail": "maya@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Relaxing yoga sessions designed to improve flexibility, posture, and mindfulness.",
+    "image": "https://i.postimg.cc/02t8pNwc/yoga-classes.png",
+    "category": "Fitness"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Web Development Bootcamp",
+    "providerName": "John Doe",
+    "providerEmail": "john@skillswap.com",
+    "price": 30,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "Learn HTML, CSS, JavaScript, and React through practical projects and mentorship.",
+    "image": "https://i.postimg.cc/Nf6btsTG/web-development.png",
+    "category": "Technology"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Digital Painting Workshop",
+    "providerName": "Lina Chowdhury",
+    "providerEmail": "lina@skillswap.com",
+    "price": 18,
+    "rating": 4.5,
+    "slotsAvailable": 6,
+    "description": "Learn digital art techniques using Procreate and Photoshop from a professional illustrator.",
+    "image": "https://i.postimg.cc/fTxMZq3L/digital-painting.png",
+    "category": "Art"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Cooking Traditional Italian Pasta",
+    "providerName": "Marco Rossi",
+    "providerEmail": "marco@skillswap.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Hands-on class to make authentic Italian pasta from scratch with local ingredients.",
+    "image": "https://i.postimg.cc/X7sMdr3q/italian-cooking.png",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Photography Basics",
+    "providerName": "Nusrat Jahan",
+    "providerEmail": "nusrat@skillswap.com",
+    "price": 12,
+    "rating": 4.4,
+    "slotsAvailable": 5,
+    "description": "Understand your camera, composition, and lighting to capture stunning photos.",
+    "image": "https://i.postimg.cc/W3Bt4w8M/photography-lessons.png",
+    "category": "Art"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Basic Coding for Kids",
+    "providerName": "David Kim",
+    "providerEmail": "david@skillswap.com",
+    "price": 15,
+    "rating": 4.8,
+    "slotsAvailable": 8,
+    "description": "Fun and interactive programming sessions designed for children aged 8–12.",
+    "image": "https://i.postimg.cc/8c9x8pQs/coding-for-kids.png",
+    "category": "Technology"
+  },
+  {
+    "skillId": 9,
+    "skillName": "French Language Exchange",
+    "providerName": "Amelie Laurent",
+    "providerEmail": "amelie@skillswap.com",
+    "price": 0,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Language exchange program for English and French speakers to practice conversation.",
+    "image": "https://i.postimg.cc/PJd9Yc8S/french-lessons.png",
+    "category": "Language"
+  },
+  {
+    "skillId": 10,
+    "skillName": "Personal Finance & Budgeting",
+    "providerName": "Kamal Uddin",
+    "providerEmail": "kamal@skillswap.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 4,
+    "description": "Learn how to manage personal finances, create budgets, and set achievable savings goals.",
+    "image": "https://i.postimg.cc/6Q5bwGP3/personal-finance.png",
+    "category": "Education"
+  }
+]

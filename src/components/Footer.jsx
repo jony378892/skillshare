@@ -9,9 +9,9 @@ export default function Footer() {
         <aside>
           <h2 className="text-xl font-bold">SkillShare</h2>
           <p>
-            ACME Industries Ltd.
+            SkillShare Society Club.
             <br />
-            Providing reliable tech since 1992
+            Providing reliable tech since 2020
           </p>
         </aside>
         <div>

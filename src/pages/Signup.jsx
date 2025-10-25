@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router";
-import { use, useState } from "react";
+import { use, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
-import { FaEyeSlash, FaKey, FaRegEye } from "react-icons/fa6";
+import { FaEyeSlash, FaRegEye } from "react-icons/fa6";
 import toast from "react-hot-toast";
 
 export default function Signup() {
@@ -11,9 +11,13 @@ export default function Signup() {
   const { createUser, updateUser, user, setUser, signInWithGoogle } =
     use(AuthContext);
 
+  // ✅ Set the page title
+  useEffect(() => {
+    document.title = "Sign Up | SkillSwap";
+  }, []);
+
   const handleRegister = (e) => {
     e.preventDefault();
-
     const form = e.target;
 
     const name = form.name.value;
@@ -24,8 +28,7 @@ export default function Signup() {
     createUser(email, password)
       .then((result) => {
         const currentUser = result.user;
-        // console.log(currentUser);
-        toast("Signup successful");
+        toast.success("Signup successful");
 
         updateUser({ displayName: name, photoURL: image })
           .then(() => {
@@ -33,27 +36,22 @@ export default function Signup() {
             navigate("/");
           })
           .catch((error) => {
-            toast(error.message);
+            toast.error(error.message);
             setUser(user);
           });
       })
       .catch((error) => {
-        const errorMessage = error.message;
-
-        toast(errorMessage);
+        toast.error(error.message);
       });
   };
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        const currentUser = result.user;
-        // console.log(currentUser);
         navigate("/");
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        toast(errorMessage);
+        toast.error(error.message);
       });
   };
 
@@ -62,29 +60,27 @@ export default function Signup() {
   };
 
   return (
-    <div className="hero min-h-screen">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="hero min-h-screen bg-base-200">
+      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-none sm:shadow-2xl my-10">
         <form
           className="card-body placeholder:text-gray-500"
           onSubmit={handleRegister}
         >
-          <div className="mb-5">
-            <h2 className="text-3xl font-bold">
-              Holla, <br />
-              Create Your Account
-            </h2>
+          <div className="mb-5 text-center">
+            <h2 className="text-3xl font-bold">Create Your Account</h2>
             <small className="text-gray-500">
-              Hey, Signup now to get started.
+              Join SkillSwap and start sharing your skills today.
             </small>
           </div>
+
           <fieldset className="fieldset">
             {/* Name */}
             <label className="label">Name</label>
             <input
               type="text"
-              className="input placeholder:text-gray-500"
+              className="input input-bordered"
               name="name"
-              placeholder="name"
+              placeholder="Your full name"
               required
             />
 
@@ -92,66 +88,62 @@ export default function Signup() {
             <label className="label">Image URL</label>
             <input
               type="text"
-              className="input placeholder:text-gray-500"
+              className="input input-bordered"
               name="image"
+              placeholder="Profile image URL"
               required
-              placeholder="ImageURL"
             />
 
-            {/* Email  */}
+            {/* Email */}
             <label className="label">Email</label>
             <input
               type="email"
-              className="input placeholder:text-gray-500"
+              className="input input-bordered"
               name="email"
-              placeholder="Email"
+              placeholder="Email address"
               required
             />
 
-            {/* password */}
+            {/* Password */}
             <label className="label">Password</label>
             <div className="relative">
               <input
-                className="input validator outline-none  valid:border-gray-300"
+                className="input input-bordered w-full"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 required
                 placeholder="Password"
-                minlength="8"
+                minLength="8"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                title="Must be more than 6 characters, including number, lowercase letter, uppercase letter"
+                title="Must include number, lowercase, uppercase, and be at least 6 characters."
               />
-              <p className="validator-hint hidden">
-                Must be more than 6 characters, including
-                <br />
-                At least one number <br />
-                At least one lowercase letter <br />
-                At least one uppercase letter
-              </p>
               <button
                 type="button"
-                className="absolute right-7 top-3 cursor-pointer"
+                className="absolute right-4 top-3 cursor-pointer"
                 onClick={handleShowPassword}
               >
-                {!showPassword ? (
-                  <FaRegEye size={18} />
+                {showPassword ? (
+                  <FaEyeSlash size={18} />
                 ) : (
-                  <FaEyeSlash size={20} />
+                  <FaRegEye size={18} />
                 )}
               </button>
             </div>
 
-            <button className="btn btn-neutral mt-4 mr-4">Signup</button>
-            <p className="font-semibold text-sm mt-3 text-center">
-              Already have an account?{" "}
-              <Link to={"/auth/login"} className="text-blue-700 underline">
-                Login Now
-              </Link>
-            </p>
+            <button className="btn btn-neutral mt-5 w-full">Signup</button>
           </fieldset>
-          <div className="divider mr-4">OR</div>
+
+          <p className="font-semibold text-sm mt-4 text-center">
+            Already have an account?{" "}
+            <Link to={"/auth/login"} className="text-blue-700 underline">
+              Login Now
+            </Link>
+          </p>
+
+          <div className="divider">OR</div>
           <button
-            className="btn mr-4 bg-white border-gray-400 text-black"
+            type="button"
+            className="btn bg-white border-gray-400 text-black w-full"
             onClick={handleGoogleSignIn}
           >
             <FcGoogle size={17} />

@@ -4,20 +4,20 @@
     "providerName": "Alex Martin",
     "category": "Music",
     "rating": 4.9,
-    "image": "https://i.postimg.cc/example1.png"
+    "image": "https://i.ibb.co.com/S4bBwMk7/premium-photo-1689530775582-83b8abdb5020.jpg"
   },
   {
     "providerId": 2,
     "providerName": "Sophie Lee",
     "category": "Design",
     "rating": 4.8,
-    "image": "https://i.postimg.cc/example2.png"
+    "image": "https://i.ibb.co.com/zWZXW5DL/photo-1438761681033-6461ffad8d80.jpg"
   },
   {
     "providerId": 3,
     "providerName": "David Chen",
     "category": "Programming",
     "rating": 4.7,
-    "image": "https://i.postimg.cc/example3.png"
+    "image": "https://i.ibb.co.com/vx944k8W/istockphoto-2063799507-612x612.jpg"
   }
 ]

@@ -62,16 +62,14 @@ export default function Login() {
 
   return (
     <div className="hero min-h-screen">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-none sm:shadow-2xl my-10">
         <form className="card-body" onSubmit={handleSignIn}>
-          <div className="mb-5">
+          <div className="mb-5 text-center">
             <h2 className="text-3xl font-bold">
-              Holla, <br />
+              <br />
               Welcome Back
             </h2>
-            <small className="text-gray-500">
-              Hey, Login now to get started.
-            </small>
+            <small className="text-gray-500">Login now to get started.</small>
           </div>
           <fieldset className="fieldset">
             <label className="label">Email</label>

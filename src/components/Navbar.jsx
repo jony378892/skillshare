@@ -22,7 +22,7 @@ export default function Navbar() {
     <header className="shadow-sm py-1">
       <div className="flex items-center py-2 bg-base-100  mx-auto container">
         {/* Logo */}
-        <Link to="/" className="navbar-start text-2xl  font-bold">
+        <Link to="/" className="navbar-start text-2xl  font-bold pl-3 sm:pl-0">
           SkillShare
         </Link>
 
@@ -33,7 +33,7 @@ export default function Navbar() {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to="/profile">Profile</Link>
+              <Link to="/profile">My Profile</Link>
             </li>
           </ul>
         </nav>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 w-36 mt-2 p-2 shadow -ml-24 text-base font-semibold border border-gray-100 space-y-2"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 w-36 mt-2 p-2 shadow -ml-24 text-base font-semibold border border-gray-100 space-y-2 "
             >
               <li>
                 <Link className="text-sm" to={"/"}>
@@ -69,20 +69,20 @@ export default function Navbar() {
               </li>
               <li>
                 <Link className="text-sm" to="/profile">
-                  Profile
+                  My Profile
                 </Link>
               </li>
               {user ? (
                 <>
                   <Link
                     to={"/profile"}
-                    className="tooltip tooltip-bottom"
+                    className="tooltip tooltip-bottom hidden sm:inline-flex"
                     data-tip={user.displayName}
                   >
                     <FaRegCircleUser size={26} />
                   </Link>
                   <Link
-                    className="btn btn-outline btn-error text-white"
+                    className="btn btn-outline btn-error hover:text-white"
                     onClick={handleLogout}
                   >
                     Logout
@@ -113,7 +113,7 @@ export default function Navbar() {
                 <FaRegCircleUser size={26} />
               </Link>
               <Link
-                className="btn btn-outline btn-error hover:text-"
+                className="btn btn-outline btn-error hover:text-white"
                 onClick={handleLogout}
               >
                 Logout

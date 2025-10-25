@@ -67,7 +67,7 @@ export default function HeroSection() {
 
         <SwiperSlide>
           <div className="flex flex-col-reverse sm:flex-row gap-5 items-center justify-center">
-            <div className="xl:w-1/2 pr-5 xl:pr-10">
+            <div className="xl:w-1/2 px-5 xl:px-10">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
                 Discover the Joy of Cooking Together.
               </h2>

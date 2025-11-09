@@ -11,7 +11,6 @@ export default function Signup() {
   const { createUser, updateUser, user, setUser, signInWithGoogle } =
     use(AuthContext);
 
-  // ✅ Set the page title
   useEffect(() => {
     document.title = "Sign Up | SkillSwap";
   }, []);
